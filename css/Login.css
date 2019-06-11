@@ -1,0 +1,168 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background: #F5F5F5;
+}
+.main{
+	width: 850px;
+	height: 533px;
+	margin: 60px auto;
+}
+.nbc-new1-box{
+	width: 850px;
+	height: 473px;
+	background: white;
+}
+.mian-Middle-Logo{
+    width: 156px;
+    height: 55px;
+    margin: 0 auto;
+    position: relative;
+    top: 30px;
+}
+.mian-Middle-title{
+	font-size: 18px;
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+.mian-Middle-title input{
+	display: none;
+}
+label{
+	cursor: pointer;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+.nbc-new1-box-Middle-input{
+	width: 360px;
+	height: 234px;
+	margin: 20px auto;
+	position: relative;
+	left: 0;top: 0;
+}
+/*输入框*/
+.input-k{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid #E0E4E7;
+	font-size: 12px;
+	padding-left: 10px;
+	margin-bottom: 20px;
+	outline: none;
+	font-family: tahoma, arial, simsun, sans-serif;
+}
+/*提交*/
+.input-b{
+	width: 360px;
+	height: 50px;
+	background: #e8380d;
+	color: #FFFFFF;
+	cursor: pointer;
+	line-height: 50px;
+	font-size: 20px;
+	margin-bottom: 20px;
+	border: 0px;
+	font-family: tahoma, arial, simsun, sans-serif;
+}
+.register-now{
+	text-align: right;
+	position:absolute;
+	right: -5px;top: 210px;
+}
+.register-now a{
+	cursor: pointer;
+	text-decoration: none;
+	font-size:14px;
+}
+.register-now a:first-child{
+	color: #E8380D;
+	margin-right: 6.3px;
+}
+.register-now a:last-child{
+	color: #333333;
+	margin-left: 6.3px;
+}
+.Other{
+	width: 360px;
+	height: 30px;
+	line-height: 30px;
+	color: #666666;
+	margin: 0 auto;
+	position: relative;
+	left: -5px;
+	top: 0;
+	font-family: "Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+}
+.Other-d{
+	width: 172px;
+	height: 28px;
+	position: absolute;
+	left: 98px;
+	top: 0;
+}
+.Other a{
+	width: 28px;
+	height: 28px;
+	float: left;
+	margin-left: 15px;
+	display: block;
+}
+.wx{
+	background: url(../img/third_login.png) no-repeat -59px -1px;
+}
+.wx:hover{
+	background: url(../img/third_login.png) no-repeat -59px -30px;
+}
+.zfb{
+	background: url(../img/third_login.png) no-repeat -88px -1px;
+}
+.zfb:hover{
+	background: url(../img/third_login.png) no-repeat -88px -30px;
+}
+.wb{
+	background: url(../img/third_login.png) no-repeat -30px -1px;
+}
+.wb:hover{
+	background: url(../img/third_login.png) no-repeat -30px -30px;
+}
+.qq{
+	background: url(../img/third_login.png) no-repeat -1px -1px;
+}
+.qq:hover{
+	background: url(../img/third_login.png) no-repeat -1px -30px;
+}
+/*底部*/
+.footer{
+	margin-top: 50px;
+	height: 25px;
+	text-align: center;
+	font-size: 12px;
+	padding: 10px 0 0;
+	color: #CCC;
+	font-family: "Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+	transform: scale(0.93);translateX(0px);
+}
+.a-z{
+	text-decoration:none;
+	color: #CCC;
+	margin-right: 15px;
+}
+.a-z1{
+	margin-right: 8px;
+	font-size: 12px;
+	margin-left: 3px;
+	vertical-align: middle;
+}
+img{
+	width: 13px;
+	height: 17px;
+}

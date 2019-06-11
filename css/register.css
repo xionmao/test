@@ -1,0 +1,135 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: tahoma, arial, simsun, sans-serif;
+}
+body{
+	background: #F5F5F5;
+	 -webkit-font-smoothing: antialiased;
+	 text-rendering: optimizeLegibility;
+	 min-width: 854px;
+}
+.main{
+	width: 850px;
+	height: 533px;
+	margin: 60px auto;
+}
+.nbc-new1-box{
+	width: 850px;
+	height: 463px;
+	background: white;
+}
+
+.mian-Middle-Logo{
+    width: 156px;
+    height: 55px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+    top: 15px;
+}
+.nbc-new1-box-Middle-input{
+	width: 360px;
+	height: 348px;
+	margin: 20px auto;
+	position: relative;
+	left: 0;top: 0;
+}
+.input-k{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid #E0E4E7;
+	font-size: 12px;
+	padding-left: 10px;
+	margin-top: 20px;
+	outline: none;
+}
+/*验证码*/
+.Verification{
+	position: absolute;
+	right: 0;
+	top: 160px;
+	width: 100px;
+	height: 50px;
+	border: 1px solid #E0E4E7;
+	font-size: 12px;
+	text-align: center;
+	line-height: 48px;
+	color: #484848;
+	cursor: pointer;
+}
+/*用户协议*/
+.check-box{
+	margin: 20px 0 10px 0;
+	font-size: 14px;
+	color: #666;
+	margin-left: 3px;
+	font-family: "Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+}
+.check-box a{
+	color: #e8380d;
+	cursor: pointer;
+	text-decoration:none;
+	font-family: "Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+}
+.check-box a:hover{
+	text-decoration:underline;
+}
+/*提交*/
+.input-b{
+	width: 360px;
+	height: 50px;
+	background: #e8380d;
+	color: #FFFFFF;
+	cursor: pointer;
+	line-height: 50px;
+	font-size: 20px;
+	margin-bottom: 20px;
+	outline: none;
+	border: 0px;
+	margin-left: 3px;
+}
+/*已有账号登陆*/
+.Land{
+	font-family: "Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+	text-align: right;
+	font-size:14px;
+	color: #666;
+	position: absolute;
+	right: -3px;
+	top:329px;
+}
+.Land a{
+	color: #e8380d;
+	cursor: pointer;
+	text-decoration:none;
+	font-family: "Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+}
+/*底部*/
+.footer{
+	margin-top: 50px;
+	height: 25px;
+	text-align: center;
+	font-size: 12px;
+	padding: 10px 0 0;
+	color: #CCC;
+	font-family: "Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+	transform: scale(0.93);translateX(0px);
+}
+.a-z{
+	text-decoration:none;
+	color: #CCC;
+	margin-right: 15px;
+}
+.a-z1{
+	margin-right: 8px;
+	font-size: 12px;
+	margin-left: 3px;
+	vertical-align: middle;
+}
+img{
+	width: 13px;
+	height: 17px;
+}
