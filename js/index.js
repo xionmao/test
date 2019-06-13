@@ -16,7 +16,14 @@ $(function(){
 				$("<a href='#'></a>").appendTo($(".nav-ul-li").eq(i))
 				$(".nav-ul li a").eq(i).html(t)
 			});
+			for (var cb = 3;cb<=9;cb++) {
+				$(".nav-ul-li a").eq(cb).click(function(){
+					alert("该功能未开发")
+				})
+			}
+			
 			$(".nav-ul-li").last().children("a").attr("href","register.html")
+			$(".nav-ul-li").eq(2).children("a").attr("href","Mars.html")
 			var zh =  $.cookie('chetla')?$.cookie('chetla'):"用户"
 			$(".nav-ul-li").last().children("a").html(zh)
 			//下拉菜单
@@ -195,6 +202,7 @@ $(function(){
 			$("<h2></h2>").html(data.hot_title[2]).appendTo($(".hot-title").eq(2));
 			$("<a></a>").html(data.hot_title[3]).appendTo($(".hot-title").eq(2));
 			$("<ul></ul>").addClass("service").appendTo(".service_c");
+			
 			$.each(data.service_t, function(i,t) {
 				$("<li></li>").appendTo(".service");
 				$("<div></div>").addClass("sico").appendTo($(".service li").eq(i))
@@ -212,7 +220,6 @@ $(function(){
 				$("<a></a>").addClass("item_a").appendTo($(".server-list-item").eq(i));
 				$("<i></i>").appendTo($(".item_a").eq(i))
 				$("<span></span>").html(t).appendTo($(".item_a").eq(i))
-				
 			});
 			$(".item_a i").eq(0).addClass("icon-circle_7-c")
 			$(".item_a i").eq(1).addClass("icon-circle_arrow-down2")
@@ -285,6 +292,30 @@ $(function(){
                 $('body,html').animate({scrollTop:0},1000);
                 return false;
             });
+            $(".Shopping-commodity").click(function(){
+            	alert("该功能未开发")
+            })
+            $(".swiper-slide img").click(function(){
+            	alert("该功能未开发")
+            })
+            $(".nb-mall-list-newrelease-ul").click(function(){
+            	alert("该功能未开发")
+            })
+            $(".nbc-new1-box").click(function(){
+            	alert("该功能未开发")
+            })
+            $(".nbc-new2-box").click(function(){
+            	alert("该功能未开发")
+            })
+            $(".service_c li").click(function(){
+				alert("该功能未开发")
+			})
+            $(".item_a").click(function(){
+				alert("该功能未开发")
+			})
+            $(".bg-base-dark li").click(function(){
+            	alert("该功能未开发")
+            })
 		}
 	});
 		var mySwiper = new Swiper ('.swiper-container', {
