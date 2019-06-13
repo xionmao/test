@@ -943,6 +943,10 @@
 .icon_t a {
 	display: inline-block;
 	font-size: 50px;
+
+}
+.icon_t a:hover{
+	color: red;
 }
 
 .wode {
