@@ -18,6 +18,25 @@ $(function(){
 	$(".Verification").click(function(){
 		Verification()
 	})
+	$(document).keypress(function(e){
+		if(e.keyCode == 13){
+			var tal = $("input[type=text]").eq(0).val();
+			var pass = $("input[type=password]").eq(0).val();
+			var S_Ver = $("input[type=text]").eq(1).val();
+			var Ver =  $(".Verification").html();
+			var cbox = $("input[type=checkbox]").prop("checked");
+			if(cbox){
+				if(checktal(tal)&&checkPassword(pass)&&checkjudge(S_Ver,Ver)){
+					alert("注册成功");
+					 $(location).attr('href', 'Login.html');
+					$.cookie("chetla",tal,{expirse:1})//cookie记住账号
+					$.cookie("chepass",pass,{expirse:1})//cookie记住密码
+				}
+			}else{
+				alert("未同意相关协议，将无法进行注册")
+			}
+		}
+	})
 	$(".input-b").click(function(){
 		var tal = $("input[type=text]").eq(0).val();
 		var pass = $("input[type=password]").eq(0).val();
@@ -52,7 +71,7 @@ $(function(){
 		if(flag){
 			return true;
 		}else{
-			alert("手机号非法");
+			alert("请输入正确的手机号");
 			return false;
 		}
 	}

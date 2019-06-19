@@ -1,9 +1,10 @@
 $(function(){
 	$.ajax({
 		type:"get",
-		url:"json/Mars.json",
+		url:"json/service.json",
 		async:true,
 		success:function(data){
+			//新建导航栏-副
 			$("<div></div>").appendTo(".nav").addClass("nav-top")
 			//导航栏-主logo
 			$("<a></a>").appendTo(".nav-top").addClass("nav-logo-a")
@@ -25,83 +26,47 @@ $(function(){
 					alert("该功能未开发")
 				})
 			}
-			$(".nav-ul-li").first().children("a").attr("href","index.html")
-			$(".nav-ul-li").eq(5).children("a").attr("href","service.html")
 			$(".nav-ul-li").last().children("a").attr("href","register.html")
+			$(".nav-ul-li").first().children("a").attr("href","index.html")
+			$(".nav-ul-li").eq(2).children("a").attr("href","Mars.html")
 			var zh =  $.cookie('chetla')?$.cookie('chetla'):"用户"
 			$(".nav-ul-li").last().children("a").html(zh)
-			//下拉菜单
-			$("<div></div>").addClass("cont").appendTo(".nav-ul>li:eq(1)");
-			$("<ul></ul>").appendTo(".cont").addClass("cont-ul");
-			$("<li></li>").appendTo(".cont-ul").addClass("cont-ul-li");
-			$("<a></a>").appendTo(".cont-ul-li").attr("href","#").addClass("cont-a");
-			$("<img />").attr("src",data.nav_img[0]).appendTo(".cont-a");
-			$("<div></div>").appendTo(".cont-a").html("努比亚阿尔法");
-			$(".nav-ul>li:eq(1)").mouseenter(function(){
-				$(".cont").stop()
-				$(".cont").slideDown()
-			}).mouseleave(function(){
-				$(".cont").stop()
-				$(".cont").slideUp()
-			})
-			//附属导航栏
-			$("<div></div>").addClass("sub-nav-c").appendTo(".sub-nav")
-			$.each(data.sub_nav, function(i,t) {
-				$("<div></div>").addClass("sub-nav-n").appendTo(".sub-nav-c")
+			//服务标题
+			$("<div></div>").addClass("nb-ser-stitle").appendTo(".nb-ser-content");
+			$("<h2></h2>").html(data.ser_stitle[0]).appendTo(".nb-ser-stitle");
+			$("<h3></h3>").html(data.ser_stitle[1]).appendTo(".nb-ser-stitle");
+			//服务块
+			$("<div></div>").addClass("nb-ser-sbox").appendTo(".nb-ser-content");
+			$("<ul></ul>").addClass("cl").appendTo(".nb-ser-sbox");
+			$.each(data.service_t, function(i,t) {
+				$("<li></li>").addClass("cl-li").appendTo(".cl")
 			});
-			$(".sub-nav-n").eq(0).html(data.sub_nav[0])
-			$("<ul></ul>").addClass("sub-nav-ul").appendTo($(".sub-nav-n").eq(1))
-			$.each(data.sub_info, function(i,t) {
-				$("<li></li>").appendTo(".sub-nav-ul")
-				$("<a></a>").attr("href","#").html(t).appendTo($(".sub-nav-ul li").eq(i))
+			$("<div></div>").addClass("figure").appendTo($(".cl").eq(0).children("li"))
+			$("<div></div>").addClass("cont").appendTo($(".cl").eq(0).children("li"))
+			$(".cl .figure").eq(0).css("background","url(img/nb-sc-policy-ico1.jpg)")
+			$(".cl .figure").eq(1).css("background","url(img/nb-sc-policy-ico2.jpg)")
+			$("<h2></h2>").appendTo(".cont")
+			$("<p></p>").appendTo(".cont")
+			$.each(data.service_info, function(i,t) {
+				$(".cont h2").eq(i).html(data.service_t[i])
+				$(".cont p").eq(i).html(t)
 			});
-			$(".sub-nav-ul a").click(function(){
-				alert("该功能未开发")
-			})
-			$.each(data.sub_bt, function(i,t) {
-				$("<a></a>").attr("href","#").html(t).addClass("sub-nav-a").appendTo($(".sub-nav-n").eq(1))
+			//服务标题
+			$("<div></div>").addClass("nb-ser-stitle").appendTo(".nb-ser-content");
+			$("<h2></h2>").html(data.ser_stitle1[0]).appendTo($(".nb-ser-stitle").eq(1));
+			$("<h3></h3>").html(data.ser_stitle1[1]).appendTo($(".nb-ser-stitle").eq(1));
+			//自助服务
+			$("<div></div>").addClass("nb-ser-sbox").appendTo(".nb-ser-content");
+			$("<ul></ul>").addClass("cl").appendTo($(".nb-ser-sbox").eq(1))
+			$.each(data.service_info1, function(i,t) {
+				$("<li></li>").addClass("cl-li1").appendTo($(".cl").eq(1))
+				$("<a></a>").appendTo($(".cl-li1").eq(i))
+				$("<b></b>").appendTo($(".cl-li1 a").eq(i))
+				$("<p></p>").html(t).appendTo($(".cl-li1 a").eq(i))
 			});
-			$(".sub-nav-a").click(function(){
-				alert("该功能未开发")
-			})
-			$(window).scroll(function(){
-				var stop =$(window).scrollTop()
-				if(stop>0){
-					$(".sub-nav").css("top","0")
-				} else{
-					$(".sub-nav").css("top","66")
-				}
-			})
-			//mars宣传图1
-			$("<img />").attr("src",data.Mars1).appendTo(".mars1")
-			//mars宣传图2
-			$("<img />").attr("src",data.Mars2).appendTo(".mars2")
-			//mars宣传图3
-			$("<img />").attr("src",data.Mars3).appendTo(".mars3")
-			//mars宣传图4
-			$("<img />").attr("src",data.Mars4).appendTo(".mars4")
-			//mars宣传图5
-			$("<img />").attr("src",data.Mars5).appendTo(".mars5")
-			for(var c = 1;c<=5;c++){
-				$(".mars"+c+"").click(function(){
-					alert("该功能未开发")
-				})
-			}
-			//服务
-			$.each(data.server_list, function(i,t) {
-				$("<div></div>").addClass("server-list-item").appendTo(".phone-server-list");
-				$("<a></a>").addClass("item_a").appendTo($(".server-list-item").eq(i));
-				$("<i></i>").appendTo($(".item_a").eq(i))
-				$("<span></span>").html(t).appendTo($(".item_a").eq(i))
-				
+			$.each(data.service_img, function(i,t) {
+					$(".cl-li1 b").eq(i).css("background","url("+t+")")
 			});
-			$(".item_a").click(function(){
-				alert("该功能未开发")
-			})
-			$(".item_a i").eq(0).addClass("icon-circle_7-c")
-			$(".item_a i").eq(1).addClass("icon-circle_arrow-down2")
-			$(".item_a i").eq(2).addClass("icon-circle_sf")
-			$(".item_a i").eq(3).addClass("icon-circle_localization")
 			//底部服务
 			$("<div></div>").addClass("container").appendTo(".bg-base-dark");
 			$("<div></div>").addClass("row").appendTo(".container");
@@ -169,6 +134,15 @@ $(function(){
                 $('body,html').animate({scrollTop:0},1000);
                 return false;
             });
+            $(".Propaganda").click(function(){
+            	alert("该功能未开发")
+            })
+            $(".nb-ser-sbox").click(function(){
+            	alert("该功能未开发")
+            })
+            $(".bg-base-dark li").click(function(){
+            	alert("该功能未开发")
+            })
 		}
 	});
 })

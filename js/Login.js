@@ -26,9 +26,15 @@ $(function(){
 		$("label").eq(0).css("color","#333")
 		$(this).css("color","#E8380D")
 	})
-	console.log($.cookie("chetla"),$.cookie("chepass"))
-	
 	//配对验证码
+	$(document).keypress(function(e){
+		if(e.keyCode == 13){
+			if(Login()){
+				$("input[type=text]").val("");
+				$("input[type=password]").val("");
+			}
+		}
+	})
 	$("input[type = button]").click(function(){
 		if(Login()){
 			$("input[type=text]").val("");

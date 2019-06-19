@@ -16,14 +16,19 @@ $(function(){
 				$("<a href='#'></a>").appendTo($(".nav-ul-li").eq(i))
 				$(".nav-ul li a").eq(i).html(t)
 			});
-			for (var cb = 3;cb<=9;cb++) {
+			for (var cb = 6;cb<=9;cb++) {
 				$(".nav-ul-li a").eq(cb).click(function(){
 					alert("该功能未开发")
 				})
 			}
-			
+			for (var ca = 3;ca<=4;ca++) {
+				$(".nav-ul-li a").eq(ca).click(function(){
+					alert("该功能未开发")
+				})
+			}
 			$(".nav-ul-li").last().children("a").attr("href","register.html")
 			$(".nav-ul-li").eq(2).children("a").attr("href","Mars.html")
+			$(".nav-ul-li").eq(5).children("a").attr("href","service.html")
 			var zh =  $.cookie('chetla')?$.cookie('chetla'):"用户"
 			$(".nav-ul-li").last().children("a").html(zh)
 			//下拉菜单
@@ -202,7 +207,6 @@ $(function(){
 			$("<h2></h2>").html(data.hot_title[2]).appendTo($(".hot-title").eq(2));
 			$("<a></a>").html(data.hot_title[3]).appendTo($(".hot-title").eq(2));
 			$("<ul></ul>").addClass("service").appendTo(".service_c");
-			
 			$.each(data.service_t, function(i,t) {
 				$("<li></li>").appendTo(".service");
 				$("<div></div>").addClass("sico").appendTo($(".service li").eq(i))
@@ -331,19 +335,5 @@ $(function(){
 	    autoplay:{
 	    	disableOnInteraction:false,
 	    }
-  }) 
-//	  var mySwiper = new Swiper ('.swiper-nb-mall-lister', {
-//	    direction: 'horizontal', // 垂直切换选项
-//	    loop: true, // 循环模式选项
-//	    
-//	    // 如果需要分页器
-//	    pagination: {
-//	      el: '.swiper-pagination',
-//	    },
-//	    effect : 'fade',
-//	    autoplay:true,
-//	    autoplay:{
-//	    	disableOnInteraction:false,
-//	    }
-// 	 })        
+  })   
 })
